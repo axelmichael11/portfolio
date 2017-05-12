@@ -17,9 +17,10 @@ function portfolioConstructor(rawDataObj) {
 function navBarGenerator(){
   //getting the profile picture to the page...
   var nav = document.getElementById('nav');
-  var img = document.createElement('img');
-  img.setAttribute('href',profilePic);
-  img.setAttribute('id','profilePic');
+  //still thinking about where to put a picture of myself!
+  // var img = document.createElement('img');
+  // img.setAttribute('href',profilePic);
+  // img.setAttribute('id','profilePic');
 
   //getting the about, and portfolio links going...
   var navBarlinks = document.createElement('ul');
@@ -37,7 +38,7 @@ function navBarGenerator(){
 
 
   //get everything appending to the nav bar...
-  nav.appendChild(img);
+  // nav.appendChild(img);
   nav.appendChild(navBarlinks);
 }
 
