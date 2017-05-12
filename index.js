@@ -22,13 +22,13 @@ function navBarGenerator(){
   img.setAttribute('id','profilePic');
 
   //getting the about, and portfolio links going...
-  var navBarlinks = document.createElement('div');
+  var navBarlinks = document.createElement('ul');
   navBarlinks.setAttribute('class','navBarlinks');
 
-  var about =  document.createElement('div');
+  var about =  document.createElement('li');
   about.setAttribute('id','about');
   about.textContent = 'About';
-  var portfolio =  document.createElement('portfolio');
+  var portfolio =  document.createElement('li');
   portfolio.setAttribute('id','portfolio');
   portfolio.textContent = 'Portfolio';
 

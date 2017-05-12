@@ -23,6 +23,12 @@ html, body {
   position: static;
 }
 
+
+/*div ul li {
+  background: #00467c;
+
+}*/
+
 #profilePic {
   width:200px;
   height:100%;
@@ -31,19 +37,23 @@ html, body {
 }
 
 .navBarlinks {
-  width:40%;
+  width:20%;
   height:100%;
-  /*border: 2px dashed purple;*/
+  display:inline;
   float:right;
+  /*margin-right: 100px;*/
+  display:none;
+  /*border: 2px dashed purple;*/
+  /*float:right;*/
 }
 
 #about, #portfolio {
   display:inline;
-  margin: auto 50px;
+  /*margin: auto 50px;*/
   font-family: 'Lato', sans-serif;
   font-size: 50px;
   /*border: 2px dashed yellow;*/
-  padding:20px 20px;
+  /*padding:20px 20px;*/
   color: white;
 }
 
@@ -64,4 +74,34 @@ html, body {
 
 #title {
   font-size: 500px bold;
+}
+
+.icon-menu {
+  float:right;
+  /*padding-right:10px;*/
+  height:100px;
+  width:40px;
+  background-image: url('http://theitaliancottage.com/assets/images/menu_icon.png');
+}
+
+.icon-menu{
+  /*display:none;*/
+}
+
+@media screen and (min-width: 800px) {
+
+.icon-menu{
+  height:40px;
+  width:40px;
+  display:none;
+  background-image: url('https://cdn0.iconfinder.com/data/icons/social-messaging-productivity-4/128/menu-2-128.png');
+}
+.navBarlinks {
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+}
+
+
+
 }
