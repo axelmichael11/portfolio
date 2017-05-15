@@ -31,5 +31,10 @@ address {
   display: inline-block;
 }
 
+h1{
+  font-size:4em;
+  font-family: 'Lato', sans-serif;
+}
+
 /*LINK STYLES
 =======================================*/

@@ -13,14 +13,17 @@ function Project(rawDataObj) {
 }
 
 Project.prototype.toHtml = function () {
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
+  // var $newProject = $('article.template').clone();
+  // $newProject.removeClass('template');
+  // if (!this.publishedOn) $newProject.addClass('draft');
+  // $newProject.find('h2').html(this.title);
+  // $newProject.find('h3').html(this.publishedOn);
+  // $newProject.find('p').html(this.description);
+  // return $newProject;
+  var template = $('.template').html();
 
-  if (!this.publishedOn) $newProject.addClass('draft');
-  $newProject.find('h1').html(this.title);
-  $newProject.find('h3').html(this.publishedOn);
-  $newProject.find('p').html(this.description);
-  return $newProject;
+  var templateRender = Handlebars.compile(template);
+  return templateRender(this);
 }
 
 function aboutPageGenerator() {
