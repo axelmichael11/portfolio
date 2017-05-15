@@ -1,0 +1,35 @@
+/* RESET */
+
+* {
+margin: 0;
+padding: 0;
+width: 100%;
+box-sizing: border-box;
+/*border: 2px dashed blue;*/
+}
+
+
+html, body {
+  height:100%;
+  width:100%;
+  background: #00bfff;
+  /*border: 2px dashed green;*/
+}
+
+hr {
+  margin: 1em;
+  width: 80%;
+}
+
+/*TEXT STYLES
+=======================================*/
+p {
+  font-size: 1em;
+}
+
+address {
+  display: inline-block;
+}
+
+/*LINK STYLES
+=======================================*/
