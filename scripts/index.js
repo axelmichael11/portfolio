@@ -3,9 +3,9 @@
 var profilePic = 'images/profilePic';
 var introduction = 'Aspiring JavaScript Dev producing high quality responsive websites';
 
-//this constructor will eventually render my portfolio projects to the page inside of divs...
-var projects = [];
 
+var projects = [];
+//this constructor will eventually render my portfolio projects to the page inside of divs...
 function Project(rawDataObj) {
   this.title = rawDataObj.title;
   this.publishedOn = rawDataObj.publishedOn;
