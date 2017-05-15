@@ -12,12 +12,6 @@
   /*width:40px;*/
   color:white;
 }
-.navBarlink {
-  display: inline;
-  padding: 0;
-  /*list-style: none;*/
-  /*margin-right: 100px;*/
-}
 #about-icon, #portfolio-icon,#about, #portfolio {
   display:inline;
 }

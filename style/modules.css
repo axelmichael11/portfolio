@@ -17,15 +17,17 @@
 }
 
 #about, #portfolio {
-  display:none;
+  /*display:none;*/
+  
   padding: 0 20px;
   font-family: 'Lato', sans-serif;
   font-size: 2em;
   color: white;
+  list-style-type: none;
 }
 
 #about-icon, #portfolio-icon {
-  display:none;
+  display:inline;
   font-size:2em;
   color:white;
 }
