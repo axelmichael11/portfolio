@@ -23,34 +23,6 @@ Project.prototype.toHtml = function () {
   return $newProject;
 }
 
-function navBarGenerator(){
-  //getting the profile picture to the page...
-  var nav = document.getElementById('nav');
-  //still thinking about where to put a picture of myself!
-  // var img = document.createElement('img');
-  // img.setAttribute('href',profilePic);
-  // img.setAttribute('id','profilePic');
-
-  //getting the about, and portfolio links going...
-  var navBarlinks = document.createElement('ul');
-  navBarlinks.setAttribute('class','navBarlinks');
-
-  var about =  document.createElement('li');
-  about.setAttribute('id','about');
-  about.textContent = 'About';
-  var portfolio =  document.createElement('li');
-  portfolio.setAttribute('id','portfolio');
-  portfolio.textContent = 'Portfolio';
-
-  navBarlinks.appendChild(about);
-  navBarlinks.appendChild(portfolio);
-
-
-  //get everything appending to the nav bar...
-  // nav.appendChild(img);
-  nav.appendChild(navBarlinks);
-}
-
 function aboutPageGenerator() {
   //creating initial intro div
   var about = document.getElementById('about-page');
@@ -80,7 +52,4 @@ projects.forEach(function(project) {
   $('#portfolio-pages').append(project.toHtml());
 });
 
-
-
-navBarGenerator();
 aboutPageGenerator();
