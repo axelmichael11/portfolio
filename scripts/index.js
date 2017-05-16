@@ -21,7 +21,7 @@ Project.prototype.toHtml = function () {
   // $newProject.find('p').html(this.description);
   // return $newProject;
   var template = $('.template').html();
-
+  //this is my handlebars code!!!!
   var templateRender = Handlebars.compile(template);
   return templateRender(this);
 }
