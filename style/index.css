@@ -1,7 +1,7 @@
 
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
 
 #icon-menu{
   display:none;
@@ -11,7 +11,13 @@
   /*height:200px;*/
   /*width:40px;*/
   color:white;
+  /*font-size:4em;*/
 }
-#about-icon, #portfolio-icon,#about, #portfolio {
+#portfolio, #about {
   display:inline;
+}
+
+/*.navBarlinks {
+  display:none;
+}*/
 }
