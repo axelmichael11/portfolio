@@ -1,23 +1,2 @@
 
-
-
-@media screen and (min-width: 600px) {
-
-#icon-menu{
-  display:none;
-  float:right;
-  /*margin:30px 60px;*/
-  /*font-size:70px;*/
-  /*height:200px;*/
-  /*width:40px;*/
-  color:white;
-  /*font-size:4em;*/
-}
-#portfolio, #about {
-  display:inline;
-}
-
-/*.navBarlinks {
-  display:none;
-}*/
-}
+/* not sure exactly what to put in the index page specifically... */
