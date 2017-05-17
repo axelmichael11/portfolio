@@ -44,3 +44,12 @@ $('ul i').on('click', function() {
     $('#portfolio-pages').fadeIn(700);
   }
 });
+
+
+
+// $('.navBarlinks i').hide();
+$('#menu-icon').on('click', function() {
+  $('.navBarlinks').show();
+  // $('#about-page').fadeIn();
+  // $('#portfolio-page').fadeIn();
+})

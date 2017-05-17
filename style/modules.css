@@ -4,32 +4,30 @@
   background: #00467c;
   height:20%;
   position: static;
+  text-align:center;
 }
 
 
-.navBarlinks {
-  /*width:20%;*/
-  /*height:100%;*/
+.nav-bar-links {
   display:inline;
-  float:right;
-  /*display:none;*/
-
+  color:white;
 }
 
-.navBarlinks li {
-  display:none;
+.nav-bar-links li {
+  display:inline;
   padding: 0 20px;
   font-family: 'Lato', sans-serif;
   font-size: 3em;
   color: white;
   list-style-type: none;
+  font-size:3em;
 }
 
-#about-icon, #portfolio-icon {
+.nav-bar-links i {
   display:inline;
-  font-size:3em;
-  color:white;
+  font-size: 3em;
 }
+
 
 #about-page {
   width:100%;
