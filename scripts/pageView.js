@@ -1,5 +1,6 @@
 'use strict';
 
+const ProjectView = {};
 //This is for page anchors! I want to eventually use this code instead of reloading the data on the page....
 // $('#about').on('click',function() {
 //   console.log('you clicked on it');
@@ -23,6 +24,13 @@
 //   $('html, body').animate({ scrollTop: 800 }, 600);
 //   return false;
 // });
+
+
+
+Project.initIndexPage = function() {
+  Article.all.forEach(function(project) {
+    $('#template').append(project.toHtml())
+  });
 
 
 $('ul li').on('click', function() {
