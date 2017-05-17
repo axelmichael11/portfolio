@@ -36,11 +36,11 @@ function aboutPageGenerator() {
   about.appendChild(div);
 }
 
-function loadAll(data) {
-  data.forEach(function (jsonObject) {
-    Project.all.push(new Project(jsonObject));
+Project.loadAll = function(data) {
+  data.forEach(function (object) {
+    Project.all.push(new Project(object));
   })
-}
+};
 
 projectData.forEach(function(projectObject) {
   projects.push(new Project(projectObject));
@@ -54,10 +54,11 @@ Project.fetchAll = function() {
   $.getJSON('data/project_data.JSON')
   .then(
     function(data) {
-        Article.loadAll(data);
-        localStorage.rawData = JSON.stringify(data);
-        articleView.initIndexPage();
-      }
+      Project.loadAll(data);
+      localStorage.rawData = JSON.stringify(data);
+      Project.initIndexPage();
+    }
   )
+}
 
 aboutPageGenerator();
