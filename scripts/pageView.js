@@ -28,7 +28,7 @@ const ProjectView = {};
 
 
 Project.initIndexPage = function() {
-  Article.all.forEach(function(project) {
+  Project.all.forEach(function(project) {
     $('#template').append(project.toHtml())
   });
 
