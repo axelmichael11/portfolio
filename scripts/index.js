@@ -5,6 +5,7 @@ var introduction = 'Aspiring JavaScript Dev producing high quality responsive we
 
 
 var projects = [];
+Project.all = [];
 function Project(rawDataObj) {
   this.title = rawDataObj.title;
   this.publishedOn = rawDataObj.publishedOn;
@@ -12,15 +13,7 @@ function Project(rawDataObj) {
 }
 
 Project.prototype.toHtml = function () {
-  // var $newProject = $('article.template').clone();
-  // $newProject.removeClass('template');
-  // if (!this.publishedOn) $newProject.addClass('draft');
-  // $newProject.find('h2').html(this.title);
-  // $newProject.find('h3').html(this.publishedOn);
-  // $newProject.find('p').html(this.description);
-  // return $newProject;
   var template = $('.template').html();
-  //this is my handlebars code!!!!
   var templateRender = Handlebars.compile(template);
   return templateRender(this);
 }
@@ -43,6 +36,12 @@ function aboutPageGenerator() {
   about.appendChild(div);
 }
 
+Project.loadAll = function(data) {
+  data.forEach(function (object) {
+    Project.all.push(new Project(object));
+  })
+};
+
 projectData.forEach(function(projectObject) {
   projects.push(new Project(projectObject));
 });
@@ -50,5 +49,16 @@ projectData.forEach(function(projectObject) {
 projects.forEach(function(project) {
   $('#portfolio-pages').append(project.toHtml());
 });
+
+Project.fetchAll = function() {
+  $.getJSON('data/project_data.JSON')
+  .then(
+    function(data) {
+      Project.loadAll(data);
+      localStorage.rawData = JSON.stringify(data);
+      Project.initIndexPage();
+    }
+  )
+}
 
 aboutPageGenerator();
