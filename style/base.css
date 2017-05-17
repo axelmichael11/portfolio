@@ -3,9 +3,7 @@
 * {
 margin: 0;
 padding: 0;
-/*width: 100%; //this is tweaking things on the page, i'm not sure how but it is... hm */
 box-sizing: border-box;
-/*border: 2px dashed blue;*/
 }
 
 
@@ -13,7 +11,6 @@ html, body {
   height:100%;
   width:100%;
   background: #00bfff;
-  /*border: 2px dashed green;*/
 }
 
 hr {
@@ -28,7 +25,10 @@ p {
 }
 
 address {
-  display: inline-block;
+
+}
+a {
+  text-decoration: none;
 }
 
 h1{

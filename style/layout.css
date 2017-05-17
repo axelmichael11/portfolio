@@ -1,18 +1,18 @@
-/*Still not exactly sure what to put into the layout css file...*/
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1000px) {
 
-#icon-menu{
+#icon-menu, #icon-menu-clicked{
   display:none;
   float:right;
-  /*margin:30px 60px;*/
-  /*font-size:70px;*/
-  /*height:200px;*/
-  /*width:40px;*/
+
   color:white;
-  /*font-size:4em;*/
 }
-#portfolio, #about {
+.nav-bar-links li {
   display:inline;
+
+}
+#about-icon, #portfolio-icon, #twitter-icon {
+  display:inline;
+
 }
 }

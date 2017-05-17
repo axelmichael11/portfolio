@@ -44,3 +44,20 @@ $('ul i').on('click', function() {
     $('#portfolio-pages').fadeIn(700);
   }
 });
+
+
+
+$('.nav-bar-links i').hide();
+$('#icon-menu-clicked').hide();
+
+$('#icon-menu').on('click', function() {
+  $('.nav-bar-links i').toggle('slow').fadeIn(300);
+  $('#icon-menu').hide();
+  $('#icon-menu-clicked').show();
+})
+
+$('#icon-menu-clicked').on('click', function() {
+  $('.nav-bar-links i').toggle('slow').fadeOut(300);
+  $('#icon-menu').show();
+  $('#icon-menu-clicked').hide();
+});
