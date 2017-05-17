@@ -47,9 +47,19 @@ $('ul i').on('click', function() {
 
 
 
-// $('.navBarlinks i').hide();
-$('#menu-icon').on('click', function() {
-  $('.navBarlinks').show();
+$('.nav-bar-links i').hide();
+$('#icon-menu-clicked').hide();
+
+$('#icon-menu').on('click', function() {
+  $('.nav-bar-links i').toggle('slow').fadeIn(300);
+  $('#icon-menu').hide();
+  $('#icon-menu-clicked').show();
   // $('#about-page').fadeIn();
   // $('#portfolio-page').fadeIn();
 })
+
+$('#icon-menu-clicked').on('click', function() {
+  $('.nav-bar-links i').toggle('slow').fadeOut(300);
+  $('#icon-menu').show();
+  $('#icon-menu-clicked').hide();
+});

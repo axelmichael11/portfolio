@@ -1,8 +1,8 @@
 /*Still not exactly sure what to put into the layout css file...*/
 
-@media screen and (min-width: 804px) {
+@media screen and (min-width: 1000px) {
 
-#icon-menu{
+#icon-menu, #icon-menu-clicked{
   display:none;
   float:right;
 
