@@ -54,8 +54,6 @@ $('#icon-menu').on('click', function() {
   $('.nav-bar-links i').toggle('slow').fadeIn(300);
   $('#icon-menu').hide();
   $('#icon-menu-clicked').show();
-  // $('#about-page').fadeIn();
-  // $('#portfolio-page').fadeIn();
 })
 
 $('#icon-menu-clicked').on('click', function() {

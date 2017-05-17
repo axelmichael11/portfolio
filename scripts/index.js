@@ -5,7 +5,6 @@ var introduction = 'Aspiring JavaScript Dev producing high quality responsive we
 
 
 var projects = [];
-//this constructor will eventually render my portfolio projects to the page inside of divs...
 function Project(rawDataObj) {
   this.title = rawDataObj.title;
   this.publishedOn = rawDataObj.publishedOn;
@@ -27,12 +26,10 @@ Project.prototype.toHtml = function () {
 }
 
 function aboutPageGenerator() {
-  //creating initial intro div
   var about = document.getElementById('about-page');
   var div = document.createElement('div');
   div.setAttribute('id','about-page-info');
 
-  //here I am writing my name, and small intro...
   var title = document.createElement('h1');
   title.setAttribute('id','title');
   title.textContent= 'Michael Axelson';
@@ -41,7 +38,6 @@ function aboutPageGenerator() {
   intro.setAttribute('id','intro');
   intro.textContent = introduction;
 
-  //here I am writing my short intro to the page...
   div.appendChild(title);
   div.appendChild(intro);
   about.appendChild(div);
