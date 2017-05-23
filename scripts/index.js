@@ -4,7 +4,7 @@ var profilePic = 'images/profilePic';
 var introduction = 'Aspiring JavaScript Dev producing high quality responsive websites';
 
 
-var projects = [];
+
 Project.all = [];
 function Project(rawDataObj) {
   this.title = rawDataObj.title;
@@ -43,10 +43,10 @@ Project.loadAll = function(data) {
 };
 
 projectData.forEach(function(projectObject) {
-  projects.push(new Project(projectObject));
+  Project.all.push(new Project(projectObject));
 });
 
-projects.forEach(function(project) {
+Project.all.forEach(function(project) {
   $('#portfolio-pages').append(project.toHtml());
 });
 
