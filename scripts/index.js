@@ -46,7 +46,7 @@ projectData.forEach(function(projectObject) {
   Project.all.push(new Project(projectObject));
 });
 
-projects.forEach(function(project) {
+Project.all.forEach(function(project) {
   $('#portfolio-pages').append(project.toHtml());
 });
 
