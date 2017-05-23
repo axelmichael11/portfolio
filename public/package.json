@@ -10,16 +10,25 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/axelmichael11/portfolio.git"
   },
-  "author": "",
+  "author": "Michael Axelson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/axelmichael11/portfolio/issues"
   },
-  "homepage": "https://github.com/axelmichael11/portfolio#readme"
+  "homepage": "https://github.com/axelmichael11/portfolio#readme",
+  "keywords": [
+    "Michael",
+    "Axelson",
+    "webdev",
+    "web",
+    "development",
+    "portfolio"
+  ]
 }
