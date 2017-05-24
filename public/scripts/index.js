@@ -1,5 +1,6 @@
 'use strict';
-var app = app || {};
+var app = app || {}; //why both app OR an empty object?
+
 
 var introduction = 'Aspiring JavaScript Dev producing high quality responsive websites';
 
