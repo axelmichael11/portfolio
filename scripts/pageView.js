@@ -31,6 +31,7 @@ Project.initIndexPage = function() {
   Project.all.forEach(function(project) {
     $('#template').append(project.toHtml())
   });
+}
 
 
 $('ul li').on('click', function() {
