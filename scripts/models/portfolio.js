@@ -26,9 +26,9 @@ var introduction = 'Aspiring JavaScript Dev producing high quality responsive we
   };
 
   //I'm not exactly if we need this? if we are using the similar loadAll and fetchAll methods...?
-  projectData.forEach(function(projectObject) {
-    Project.all.push(new Project(projectObject));
-  });
+  // projectData.forEach(function(projectObject) {
+  //   Project.all.push(new Project(projectObject));
+  // });
 
   Project.all.forEach(function(project) {
     $('#portfolio-pages').append(project.toHtml());
