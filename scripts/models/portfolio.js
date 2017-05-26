@@ -6,56 +6,54 @@ var introduction = 'Aspiring JavaScript Dev producing high quality responsive we
 
 // I kept to a similar structure concerning the IIFE we did in class, simply to free up the global name space...
 (function(module){
-  Project.all = [];
-  function Project(rawDataObj) {
-    this.title = rawDataObj.title;
-    this.publishedOn = rawDataObj.publishedOn;
-    this.description = rawDataObj.description
+  Portfolio.all = [];
+  function Portfolio(rawDataObj) {
+    Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
   }
 
-  Project.prototype.toHtml = function () {
+  Portfolio.prototype.toHtml = function () {
     var template = $('.template').html();
     var templateRender = Handlebars.compile(template);
     return templateRender(this);
   }
 
-  Project.loadAll = function(rows) {
-    Project.all = rows.map(function(ele) { //streamlined .map()
-      return new Project(ele);
+  Portfolio.loadAll = function(rows) {
+    Portfolio.all = rows.map(function(ele) { //streamlined .map()
+      return new Portfolio(ele);
     });
   };
 
   //I'm not exactly if we need this? if we are using the similar loadAll and fetchAll methods...?
-  // projectData.forEach(function(projectObject) {
-  //   Project.all.push(new Project(projectObject));
+  // PortfolioData.forEach(function(PortfolioObject) {
+  //   Portfolio.all.push(new Portfolio(PortfolioObject));
   // });
 
-  Project.all.forEach(function(project) {
-    $('#portfolio-pages').append(project.toHtml());
+  Portfolio.all.forEach(function(Portfolio) {
+    $('#portfolio-pages').append(Portfolio.toHtml());
   });
 
-  Project.fetchAll = function() {
-    $.getJSON('data/project_data.JSON')
+  Portfolio.fetchAll = function() {
+    $.getJSON('/data/project_data.JSON')
     .then(
       function(data) {
-        Project.loadAll(data);
+        Portfolio.loadAll(data);
         localStorage.rawData = JSON.stringify(data);
-        Project.initIndexPage();
+        Portfolio.initIndexPage();
       }
     )
   };
 
 // as of right now, I couldn't come up with a really cool way of using reduce, as this simply adds the word count of my description.... (kind of lame) I am thinking of editing it to include a word count of the document I am going to attach!
-  Project.descriptionWordCount = () => {
-    return Project.all.map(function(project) {
-      return project.description.split(' ');
+  Portfolio.descriptionWordCount = () => {
+    return Portfolio.all.map(function(portfolio) {
+      return portfolio.description.split(' ');
     })
     .reduce(
       function(acc, curr) {
         return acc+ curr;
       }).length;
   };
-  module.Project = Project;
+  module.Portfolio = Portfolio;
 }(app));
 
 

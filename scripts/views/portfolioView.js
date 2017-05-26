@@ -2,10 +2,10 @@
 
 
 (function(module){
-  const ProjectView = {};
+  const portfolioView = {};
 
 
-  ProjectView.initIndexPage = function() {
+  portfolioView.initIndexPage = function() {
     app.Project.all.forEach(function(project) {
       $('#template').append(project.toHtml())
     });
@@ -49,6 +49,6 @@
     $('#icon-menu-clicked').hide();
   });
 
-app.Project.fetchAll();
+  app.Portfolio.fetchAll();
   module.portfolioView = portfolioView;
 })(app);
