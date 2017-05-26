@@ -1,5 +1,6 @@
 'use strict';
 var app = app || {};
+const gitHubToken = '351de1d82688e3c35ca74713145ddec905815600';
 
 (function(module) {
   const repos = {};
@@ -13,9 +14,7 @@ var app = app || {};
         Authorization: `token ${gitHubToken}`
       }
     })
-    .then( data => {
-      repos.all = data;
-    })
+    .then(data => repos.all = data, err => console.error(err))
     .then(callback)
   };
   repos.with = attr =>
