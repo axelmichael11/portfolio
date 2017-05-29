@@ -2,15 +2,11 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style/base.css">
-  <link rel="stylesheet" href="style/font-awesome.min.css">
-  <link rel="stylesheet" href="style/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="style/icons.css">
-  <link rel="stylesheet" type="text/css" href="style/index.css">
   <link rel="stylesheet" href="style/modules.css">
   <link rel="stylesheet" href="style/layout.css">
-  <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
 </head>
@@ -39,8 +35,11 @@
           <h3 class="publishedOn">{{publishedOn}}</h3>
           <p class="projectDescription">{{description}}</p>
         </header>
+      </article>
   </div>
-  <script id="repo-template" type="text/x-handlebars-template">
+  <div id="github">
+    <h1> Repositories </h1>
+    <script id="repo-template" type="text/x-handlebars-template">
       <li>
         <a href="{{html_url}}" target="_blank">
           <h3>{{name}}</h3>
@@ -50,7 +49,7 @@
         <p>Last updated: {{updated_at}}</p>
       </li>
     </script>
-    <div id="github"></div>
+  </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 <script
@@ -66,7 +65,7 @@
 <script src="scripts/views/portfolioView.js"></script>
 
 
-<script src="scripts/controllers/githubController.js"></script>
+<script src="scripts/controllers/repoController.js"></script>
 
 
 <script src="/scripts/models/repo.js"></script>
@@ -75,6 +74,6 @@
 <script src="scripts/projectData.js"></script>
 <script src="scripts/controllers/routes.js"></script>
 <script>
-    app.Portfolio.fetchAll();
+    // app.Portfolio.fetchAll(appPortfolio.initIndexPage);
 </script>
 </html>

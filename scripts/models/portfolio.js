@@ -18,9 +18,7 @@ var introduction = 'Aspiring JavaScript Dev producing high quality responsive we
   }
 
   Portfolio.loadAll = function(rows) {
-    Portfolio.all = rows.map(function(ele) { //streamlined .map()
-      return new Portfolio(ele);
-    });
+    Portfolio.all = rows.map(ele=> new Portfolio(ele));
   };
 
   //I'm not exactly if we need this? if we are using the similar loadAll and fetchAll methods...?
@@ -32,13 +30,16 @@ var introduction = 'Aspiring JavaScript Dev producing high quality responsive we
     $('#portfolio-pages').append(Portfolio.toHtml());
   });
 
-  Portfolio.fetchAll = function() {
-    $.getJSON('/data/project_data.JSON')
+  Portfolio.fetchAll = function(callback) {
+    $.ajax({
+      url: '/data/project_data.JSON',
+      method: 'GET'
+    })
     .then(
       function(data) {
         Portfolio.loadAll(data);
         localStorage.rawData = JSON.stringify(data);
-        Portfolio.initIndexPage();
+        callback();
       }
     )
   };

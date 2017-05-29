@@ -49,6 +49,6 @@
     $('#icon-menu-clicked').hide();
   });
 
-  app.Portfolio.fetchAll();
+  // app.Portfolio.fetchAll();
   module.portfolioView = portfolioView;
 })(app);
