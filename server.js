@@ -22,5 +22,4 @@ function proxyGitHub(request, response) {
   }))(request, response);
 }
 
-
 app.get('/github/*', proxyGitHub);
