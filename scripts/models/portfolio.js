@@ -43,8 +43,6 @@ var introduction = 'Aspiring JavaScript Dev producing high quality responsive we
       }
     )
   };
-
-// as of right now, I couldn't come up with a really cool way of using reduce, as this simply adds the word count of my description.... (kind of lame) I am thinking of editing it to include a word count of the document I am going to attach!
   Portfolio.descriptionWordCount = () => {
     return Portfolio.all.map(function(portfolio) {
       return portfolio.description.split(' ');
