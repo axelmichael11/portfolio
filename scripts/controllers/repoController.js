@@ -5,6 +5,7 @@ var app = app || {};
   const repoController = {};
 
   repoController.index = () => {
+    
     app.repos.requestRepos(app.repoView.index);
   };
   module.repoController = repoController;

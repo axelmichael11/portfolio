@@ -9,6 +9,28 @@
 
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+
+  <script id="portfolio-template" type="text/x-handlebars-template">
+    <article>
+      <header>
+        <h2>{{name}}</h2>
+        <h3 class="publishedOn">{{language}}</h3>
+        <p class="projectDescription">{{description}}</p>
+      </header>
+    </article>
+  </script>
+  <script id="repo-template" type="text/x-handlebars-template">
+    <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+        <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+  </script>
 </head>
 <body>
   <div id="nav">
@@ -20,60 +42,44 @@
       <i id="about-icon" class="fa fa-id-card-o" aria-hidden="true"></i>
       <li id="portfolio">Portfolio</li>
       <i id="portfolio-icon" class="fa fa-folder-open" aria-hidden="true"></i>
-      <a href="https://twitter.com/maxelson11"><li id="twitter">Twitter</li></a>
+      <a href="https://twitter.com/maxelson11"><li id="twitter-link">Twitter</li></a>
       <a href="https://twitter.com/maxelson11"><i id="twitter-icon" class="fa fa-twitter" aria-hidden="true"></i></a>
-      <a href="https://github.com/axelmichael11"><li id="github">Github</li></a>
+      <a href="https://github.com/axelmichael11"><li id="github-link">Github</li></a>
       <a href="https://github.com/axelmichael11"><i id="github-icon" class="fa fa-github" aria-hidden="true"></i></a>
     </ul>
+    <a href="https://twitter.com/maxelson11" class="twitter-follow-button" data-show-count="false">Follow @Maxelson11</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
-  <div id="about-page"></div>
-  <div id="portfolio-pages">
-      <h1>Portfolio</h1>
-      <article class="template" data-category="whatev">
-        <header>
-          <h2>{{title}}</h2>
-          <h3 class="publishedOn">{{publishedOn}}</h3>
-          <p class="projectDescription">{{description}}</p>
-        </header>
-      </article>
+  <div id="about-page">
+    <h1> Michael Axelson</h1>
+    <p>Aspiring JavaScript Dev producing high quality responsive websites</p>
   </div>
+  <div id="twitter">
+    <h1> Articles of Interest </h1>
+    <a class="twitter-timeline" data-width="600" data-height="450" data-theme="light" href="https://twitter.com/maxelson11">Tweets by maxelson11</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+
+
   <div id="github">
     <h1> Repositories </h1>
-    <script id="repo-template" type="text/x-handlebars-template">
-      <li>
-        <a href="{{html_url}}" target="_blank">
-          <h3>{{name}}</h3>
-        </a>
-        <p>Description: {{description}}</p>
-        <p>Created: {{created_at}}</p>
-        <p>Last updated: {{updated_at}}</p>
-      </li>
-    </script>
   </div>
 </body>
+<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  crossorigin="anonymous"></script>
 <script src="/vendor/scripts/marked.js"></script>
 <script src="vendor/scripts/highlight.pack.js"></script>
 <script src="/vendor/scripts/page.js"></script>
+<script src="data/project_data.JSON"></script>
 
 
 <script src="scripts/models/portfolio.js"></script>
-<script src="scripts/views/portfolioView.js"></script>
+<script src="/scripts/models/repo.js"></script>
+
+<script src="scripts/view/portfolioView.js"></script>
+<script src="/scripts/view/repoView.js"></script>
 
 
 <script src="scripts/controllers/repoController.js"></script>
-
-
-<script src="/scripts/models/repo.js"></script>
-<script src="/scripts/views/repoView.js"></script>
-
-<script src="scripts/projectData.js"></script>
 <script src="scripts/controllers/routes.js"></script>
-<script>
-    // app.Portfolio.fetchAll(appPortfolio.initIndexPage);
-</script>
+
 </html>

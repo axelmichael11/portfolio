@@ -1,6 +1,7 @@
 'use strict';
 var app = app || {};
 
-page('/repos', app.repoController.index);
+page('/', app.repoController.index);
 
+// page('/', app.twitterController.index);
 page();

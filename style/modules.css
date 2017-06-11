@@ -38,27 +38,33 @@
 #about-page {
   width:100%;
   height:55%;
+  text-align:center;
+  font-family: 'Lato', sans-serif;
+  padding:4em;
 }
 
-#about-page-info {
+#twitter {
+  width:100%;
+  height:55%;
   text-align:center;
-  margin-top: 200px;
-  width: 100%;
-  height: 30%;
   font-family: 'Lato', sans-serif;
-  font-size: 100px bold;
+  padding:4em;
+  padding-bottom: 36em
 }
+
+#twitter h1 {
+  margin-bottom:25px;
+}
+
 
 #portfolio-pages {
   text-align: center;
-  padding: 1em;
+  padding: 3em;
 }
 
-#intro {
-  font-size:2em;
-}
 
-#icon-menu, #icon-menu-clicked {
+
+#icon-menu {
   float:right;
   margin:auto 0;
   margin:.4em;
@@ -66,13 +72,26 @@
   color:white;
 }
 
-.template {
+#icon-menu-clicked {
   display:none;
+  float:right;
+  margin:auto 0;
+  margin:.4em;
+  font-size:3em;
+  color:white;
+}
+#github {
+  text-align: center;
+  padding:3em;
+}
+#github li {
+  text-align: center;
+  padding:1em;
 }
 
-header {
+/*header {
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-size: 30px;
   color: white;
-}
+}*/

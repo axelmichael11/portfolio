@@ -1,9 +1,6 @@
 'use strict';
 var app = app || {}; //why both app OR an empty object?
 
-
-var introduction = 'Aspiring JavaScript Dev producing high quality responsive websites';
-
 // I kept to a similar structure concerning the IIFE we did in class, simply to free up the global name space...
 (function(module){
   Portfolio.all = [];
@@ -12,7 +9,7 @@ var introduction = 'Aspiring JavaScript Dev producing high quality responsive we
   }
 
   Portfolio.prototype.toHtml = function () {
-    var template = $('.template').html();
+    var template = $('#portfolio-template').html();
     var templateRender = Handlebars.compile(template);
     return templateRender(this);
   }
@@ -54,24 +51,3 @@ var introduction = 'Aspiring JavaScript Dev producing high quality responsive we
   };
   module.Portfolio = Portfolio;
 }(app));
-
-
-function aboutPageGenerator() {
-  var about = document.getElementById('about-page');
-  var div = document.createElement('div');
-  div.setAttribute('id','about-page-info');
-
-  var title = document.createElement('h1');
-  title.setAttribute('id','title');
-  title.textContent= 'Michael Axelson';
-
-  var intro = document.createElement('p');
-  intro.setAttribute('id','intro');
-  intro.textContent = introduction;
-
-  div.appendChild(title);
-  div.appendChild(intro);
-  about.appendChild(div);
-}
-
-aboutPageGenerator();

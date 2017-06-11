@@ -4,7 +4,7 @@ var app = app || {};
 (function(module) {
   const repoView = {};
 
-  const render = Handlebars.compile($('#repo-template').text());
+  const render = Handlebars.compile($('#repo-template').html());
 
   repoView.index = function() {
     $('#github').append(
